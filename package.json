@@ -1,0 +1,19 @@
+{
+  "name": "ipl-dataset-sumanth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/mountblue/dec-js-419/ipl-dataset-sumanth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.1.0",
+    "express": "^4.16.4"
+  }
+}
