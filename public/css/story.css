@@ -1,0 +1,94 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+    margin: 0px;
+}
+h1{
+    color:rgb(248, 248, 109);
+    background-color: rgb(218, 85, 67);
+    width : 100%;
+    line-height: 90px;
+    text-align: center;
+    padding: 20px auto;
+    margin: 0px auto 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0px 10px 10px 0px rgba(128, 5, 5, 0.7);
+    font-size: 44px;
+}
+.bio{
+    text-align: justify;
+    padding: 20px;
+}
+#main{
+    /* min-width:800px;
+    max-width:85%; */
+    width:1100px;
+    margin: 20px auto;
+    margin-top: 0px;
+    background-color:beige;
+    box-shadow: 10px 10px 10px 0px rgba(180, 44, 44,0.2),-10px 10px 10px 0px rgba(180, 44, 44,0.2);
+    padding-bottom: 20px;
+    }
+h2{
+    color: rgb(173, 18, 18);
+    text-align: center;
+}
+.plotDiv{
+    min-width: 250px;
+    max-width: 70%;
+    height:300px;
+    margin: auto;
+    background-color:"rgba(0,0,0,0.4)";
+    padding: 20px;
+    border: 2px solid rgba(180, 44, 44,0.5);
+    border-radius: 20px;
+    margin:10px auto ; 
+}
+.bio{
+    min-height: 300px;
+}
+#bioText{
+    margin:10px;
+    font-size: 18px;
+}
+#bioPic{
+    float:right;
+    width: 20%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(105, 41, 4, 0.7);
+}
+@media (max-width: 1200px){
+    #main{
+        width: 80%;
+    }
+}
+@media (max-width: 700px) {
+    h1{
+        font-size: 30px;
+    }
+    #bioPic{
+    float:right;
+    width: 40%;
+    margin: 50px;
+    }
+    .plotDiv{
+        min-width: 200px;
+        max-width: 80%;
+        max-height:200px;
+        margin: auto;
+        background-color:"rgba(0,0,0,0.4)";
+        padding: 20px;
+        border: 2px solid rgba(180, 44, 44,0.5);
+        border-radius: 20px;
+        margin:10px auto ; 
+    }
+}
+.targetImg{
+    min-width: 150px;
+    max-width: 60%;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+}

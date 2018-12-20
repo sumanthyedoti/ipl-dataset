@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plot4</title>
+    <link rel="stylesheet" href="./css/story.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+<body>
+    <main id='main'>
+        <h1>Shane Watson's IPL career</h1>
+        <div class='bio'>
+            <img id='bioPic' src="./images/srWatson.jpg">
+            <p id='bioText'> Shane Robert Watson (born 17 June 1981) is a former Australian international cricketer and a former captain, who played all formats of the game.He played as a right-handed batsman and a right-handed fast-medium swing bowler. 
+            He debuted in 2002 in a One Day International and retired in 2016[2] as world No. 1 T20I all-rounder.
+            He was the last player to retire from Australia's golden era of the early 2000s. <br> <br>
+            Watson holds several records in T20Is, ODIs and T20s. According to Forbes, Watson was the highest-paid non-Indian cricketer in the world for five consecutive years, 2011 to 2015. <br> <br>
+            Watson is the only player to lead most runs, most wickets, highest score, highest batting average, most sixes, for a team in T20, which he held for 4 years (2014–17). Also the first player to win man of the tournament IPL twice.
+            </p>
+            
+        </div>
+        <div class='plotContainer'>
+            <h2>Total Runs</h2>
+            <div id="runs" class='plotDiv' ></div>
+        </div>
+        <img class="targetImg" src='./images/batting.jpg'>
+        <div class='plotContainer'>
+            <h2>50's and 100's</h2>
+            <div id="targetRuns"class='plotDiv' ></div>
+        </div>
+        <div class='plotContainer'>
+            <h2>Strike Rate</h2>
+            <div id="strikeRate" class='plotDiv'> </div>
+        </div>
+        <img class="targetImg" src='./images/bowling.jpg'>
+        <div class='plotContainer'>
+            <h2>Bowling Economy</h2>
+            <div id="econ" class='plotDiv'></div>
+        </div>
+        
+    </main>
+</body>
+<script src='./js/plot5.js'></script>
+</html>
