@@ -19,7 +19,7 @@ for(let delivery of deliveriesData){
         }
     }
 }
-console.log(extraRuns);
+// console.log(extraRuns);
 module.exports = {
     extraRuns
 }

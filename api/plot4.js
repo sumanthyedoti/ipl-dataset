@@ -39,7 +39,7 @@ let econ20=[];
 for(bowler of bowlers20){
     econ20.push(Number((econ[bowler]).toFixed(2)));
 }
-console.log(econ20);
+// console.log(econ20);
 
 module.exports = {
     bowlers20,

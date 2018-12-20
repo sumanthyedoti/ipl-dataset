@@ -6,8 +6,9 @@ fetch('api/plot3')
         Highcharts.chart('container', {
             chart: {
                 type: 'column',
-                zoomType:"",
+                //zoomType:"xy"
                  type: 'column',
+                //zoomType:'xy',
                 backgroundColor:"rgba(0,0,0,0.1)",
                 // borderColor:"black",
                 borderRadius:"20px",
@@ -18,9 +19,8 @@ fetch('api/plot3')
                 plotBackgroundColor: '#fff',
                 plotShadow: true,
                 plotMargin:"20px"
-            },
-            title: {
-                text: 'Top 20 economical bowlers in IPL-2015',
+            }, title: {
+                text: 'Extra runs conceded per team in the IPL-2016',
                 style: {
                     color: 'darkbrown',
                     fontWeight: 'bold'
@@ -30,7 +30,7 @@ fetch('api/plot3')
                 text: ""
             },
             xAxis: {
-                categories: bowlers20,
+                categories: Object.keys(extraRuns),
                 title: {
                 //text: "Teams"
                 },
@@ -45,7 +45,7 @@ fetch('api/plot3')
             yAxis: {
                 min: 0,
                 title: {
-                text: 'Economy',
+                text: 'Extra Runs',
                 align: 'middle'
                 },
                 labels: {
@@ -90,8 +90,8 @@ fetch('api/plot3')
                 enabled: true
             },
             series: [{
-                name: 'Economy',
-                data: econ20
+                name: 'Extra Runs',
+                data: Object.values(extraRuns)
             }]
-            });
+            });       
     });

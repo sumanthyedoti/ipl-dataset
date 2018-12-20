@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    width: 84%;
+    margin: auto;
+    background-color: #193f79;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-body{
+    background-color: #ecc00d;
+    min-height: 100vh;
+}
+.header{
+   position: absolute;
+   top: 60%;
+   width: 100%;
+   text-align: center;
+   font-size: 40px;
+   color: whitesmoke;
+
+}
+.bgtext{
+    padding: 20px;
+    background-color: #193f79;
+}
+.parallox-1 {
+    background: url("../images/IPLbg.jpg");
+    background-attachment: fixed;
+    background-position-y: -6px;
+	background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    min-height: 500px;
+  }
+  .parallox-2 {
+    background: url("../images/batch.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 450px;
+  }
+  .parallox-3 {
+    background: url("../images/chill2.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 450px;
+  }
+  .parallox-4 {
+    background: url("../images/batch2.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 450px;
+  }
+  .parallox-5 {
+    background: url("../images/batch3.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 450px;
+  }
+  .parallox-6 {
+    background: url("../images/chill1.jpg");
+    background-attachment: fixed;
+    background-position-y: 400px;
+	background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 200px;
+  }
+.plot-div{
+    height: 102vh;
+    width: 100%;
+    text-align:center;
+    font-size: 20px;
+    position: relative;
+}
+.plot-div a{
+    position: absolute;
+    top: 40%;
+}
