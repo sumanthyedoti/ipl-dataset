@@ -1,14 +1,23 @@
 const fs = require('fs');
 let matches = JSON.parse(fs.readFileSync('data/matchesJSON.json'));
+let deliveries = JSON.parse(fs.readFileSync('data/deliveriesJSON.json'));
+let player = 'SR Watson';
+let SRWatson = {};
+let runsTargetFlag = {
+    match: 0,
+    runs: 0,
+    fifties: 0,
+    hundereds: 0
+};
 
-let seasonIds = {};
-for (let match of matches) {
+seasonIds = matches.reduce((seasonIds, match)=>{
     if (!seasonIds.hasOwnProperty(match.season)) {
         seasonIds[match.season] = [match.id];
     } else {
         seasonIds[match.season].push(match.id);
     }
-}
+    return seasonIds;
+},{})
 // console.log(seasonIds);
 
 function getYearFromId(delivery) {
@@ -18,16 +27,8 @@ function getYearFromId(delivery) {
         }
     }
 }
-let SRWatson = {};
-let player = 'SR Watson';
-let runsTargetFlag = {
-    match: 0,
-    runs: 0,
-    fifties: 0,
-    hundereds: 0
-};
-let deliveries = JSON.parse(fs.readFileSync('data/deliveriesJSON.json'));
-for (delivery of deliveries) {
+
+SRWatson = deliveries.reduce((SRWatson, delivery)=>{
     let year = getYearFromId(delivery);
     /* ********** */
     if (!SRWatson.hasOwnProperty(year)) {
@@ -71,8 +72,10 @@ for (delivery of deliveries) {
         SRWatson[year].bowling.deliveries++;
         SRWatson[year].bowling.extras += parseInt(delivery.extra_runs);
     }
-}
+    return SRWatson;
+},{});
 
+// console.log(SRWatson);
 
 module.exports = {
     SRWatson

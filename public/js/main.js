@@ -1,3 +1,5 @@
+
+
 var plotText = document.getElementsByClassName("plot-text1")[0];
 plotText.addEventListener('click',showPlot1,false);
 

@@ -36,7 +36,8 @@ app.get('/api/plot5',(req,res)=>{
 
 
 app.listen(port, ()=>{
-    console.log(`Server is listening to ${port}`);
+    console.log(`Server is listening to ${port}`)
+    
 })
 
 
