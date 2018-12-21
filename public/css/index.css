@@ -26,17 +26,22 @@ body{
 }
 .header{
    position: absolute;
-   top: 70%;
+   top: 24vw;
    width: 100%;
    text-align: center;
    font-size: 48px;
    font-weight: bolder;
    color: #ecc00d;
-
+    z-index: 100px;
+    top: -200px;
 }
 .bgtext{
     padding: 14px;
     background-color: #193f79;
+}
+.parallax{
+    filter: blur(1.2px);
+
 }
 .parallax-1 {
     background: url("../images/IPLbg.jpg");
@@ -103,7 +108,7 @@ body{
     margin: auto;
     font-weight: bold;
     text-align:center;
-    top: 35%;
+    top: 40%;
 }
 .plot-text button{
     padding: 10px;
@@ -143,4 +148,31 @@ body{
 .plot-text:hover .graph-icon>img{
     transform: rotate(0deg);
 }
+.story-icon img{
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    position: absolute;
+    top: -180px;
+    left: 0px;
+    transform: rotateX(90deg);
+    transition-property: transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in;
+    transform-origin: bottom;
+}
+.plot-text:hover .story-icon>img{
+    transform: rotate(0deg);
+}
 
+.container{
+    min-width: 310px; 
+    max-width: 1000px; 
+    height: 640px; 
+    padding: 20px 40px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 100;
+    top:-100px;
+    display: none;
+}
