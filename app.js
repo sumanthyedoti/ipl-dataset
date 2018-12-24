@@ -27,19 +27,20 @@ app.get('/api/plot2', async(req,res)=>{
     //         });
     //     });
     // });
-    res.json({
-        matchesWon: await plot2.getMatchesWon(),
-        yearlyWins: await plot2.getYearlyWins()
-    });
+    try{
+        res.json({
+            teams: await plot2.getTeams(),
+            yearlyWins: await plot2.getYearlyWins()
+        });
+    }catch(err){
+        console.log(err);
+    }
 });
 app.get('/api/plot3',async (req,res)=>{
     res.json(await plot3.getExtraRuns());
 });
 app.get('/api/plot4', async(req,res)=>{
-    res.json({
-        bowlers20: await plot4.getBowlers20(),
-        econ20: await plot4.getEcon20()
-    });
+    res.json(await plot4.getEcon());
 });
 app.get('/api/plot5',async(req,res)=>{
     res.json(await plot5.getPlayerData());

@@ -2,15 +2,15 @@ let sql = require('../sql');
 let db=sql.db;
 
 let player = 'SR Watson';
-let SRWatson = {};
-let seasonIds = {};
+// let SRWatson = {};
+// let seasonIds = {};
 let runsTargetFlag = {
     match: 0,
     runs: 0,
     fifties: 0,
     hundereds: 0
 };
-async function getSeasonIds(){
+function getSeasonIds(){
     return new Promise((resolve, reject)=>{
         let query = `select id, season from matches`;
         db.query(query, (err, res)=>{
@@ -28,7 +28,7 @@ async function getSeasonIds(){
 }
 async function getPlayerData(){
     return new Promise(async(resolve, reject)=>{
-        seasonIds = await getSeasonIds();
+        let seasonIds = await getSeasonIds();
         /** inculde this function here */
             function getYearFromId(delivery) {
                 for (season in seasonIds) {
@@ -40,7 +40,7 @@ async function getPlayerData(){
         // let query = `select match_id, batsman, bowler, total_runs, extra_runs from deliveries where batsman='${player}' OR bowler='${player}'`;
         let query = `select match_id, batsman, bowler, total_runs, extra_runs from deliveries`
         db.query(query, (err, res)=>{
-            SRWatson = res.reduce((SRWatson, delivery)=>{
+            let SRWatson = res.reduce((SRWatson, delivery)=>{
                 let year = getYearFromId(delivery);
                 /* ********** */
                 if (!SRWatson.hasOwnProperty(year)) {
