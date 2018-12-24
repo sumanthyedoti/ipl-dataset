@@ -13,12 +13,23 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'index.html'));
 });
 app.get('/api/plot1',(req,res)=>{
-    res.json(plot1.matchesInYear);
+    plot1.getData()
+    .then((data)=> res.json(data));
 });
-app.get('/api/plot2',(req,res)=>{
+app.get('/api/plot2', async(req,res)=>{
+    // plot2.getMatchesWon()
+    // .then((dataM)=> {
+    //     plot2.getYearlyWins()
+    //     .then((dataY)=>{
+    //         res.json({
+    //             matchesWon: dataM,
+    //                 yearlyWins: dataY
+    //         });
+    //     });
+    // });
     res.json({
-        matchesWon: plot2.matchesWon,
-        yearlyWins: plot2.yearlyWins
+        matchesWon: await plot2.getMatchesWon(),
+        yearlyWins: await plot2.getYearlyWins()
     });
 });
 app.get('/api/plot3',(req,res)=>{

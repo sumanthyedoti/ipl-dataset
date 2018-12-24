@@ -44,7 +44,7 @@ bowlers20=Object.keys(econ).sort((a,b)=>{
 // console.log(bowlers20);
 
 econ20 = bowlers20.map((bowler)=> Number((econ[bowler]).toFixed(2)) );
-console.log(econ20);
+// console.log(econ20);
 
 module.exports = {
     bowlers20,
