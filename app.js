@@ -32,17 +32,17 @@ app.get('/api/plot2', async(req,res)=>{
         yearlyWins: await plot2.getYearlyWins()
     });
 });
-app.get('/api/plot3',(req,res)=>{
-    res.json(plot3.extraRuns);
+app.get('/api/plot3',async (req,res)=>{
+    res.json(await plot3.getExtraRuns());
 });
-app.get('/api/plot4',(req,res)=>{
+app.get('/api/plot4', async(req,res)=>{
     res.json({
-        bowlers20: plot4.bowlers20,
-        econ20: plot4.econ20
+        bowlers20: await plot4.getBowlers20(),
+        econ20: await plot4.getEcon20()
     });
 });
-app.get('/api/plot5',(req,res)=>{
-    res.json(plot5.SRWatson);
+app.get('/api/plot5',async(req,res)=>{
+    res.json(await plot5.getPlayerData());
 });
 
 

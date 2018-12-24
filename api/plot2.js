@@ -5,10 +5,14 @@ let teams = [];
 let yearlyWins = {};
 let matchesWon = [];
 
-async function getTeams(){
+function getTeams(){
     return new Promise((resolve, reject)=>{
         let query = 'select distinct team1 from matches'
         db.query(query, (err, res)=>{
+            if(err){
+                console.error('sql fail: query2.1');
+                throw err;
+            }
             let teams = res.reduce((teams, match)=>{
                 if(!teams.includes(match.team1)) teams.push(match.team1);
                 return teams;
@@ -17,10 +21,14 @@ async function getTeams(){
         });  
     });
 }
-async function getYearlyWins(){
+function getYearlyWins(){
     return new Promise((resolve, reject)=>{
         let query = 'select season, winner from matches'
         db.query(query, (err, res)=>{
+            if(err){
+                console.error('sql fail: query2.2');
+                throw err;
+            }
             yearlyWins= res.reduce((yearlyWins,match)=>{
                 if(!yearlyWins.hasOwnProperty(match.season)){
                     yearlyWins[match.season]={};
