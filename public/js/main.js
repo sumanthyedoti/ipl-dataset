@@ -1,16 +1,16 @@
 
 
 var plotText = document.getElementsByClassName("plot-text1")[0];
-plotText.addEventListener('click', showPlot1, false);
+if(plotText)plotText.addEventListener('click', showPlot1, false);
 
-var plotText = document.getElementsByClassName("plot-text2")[0];
-plotText.addEventListener('click', showPlot2, false);
+plotText = document.getElementsByClassName("plot-text2")[0];
+if(plotText)plotText.addEventListener('click', showPlot2, false);
 
-var plotText = document.getElementsByClassName("plot-text3")[0];
-plotText.addEventListener('click', showPlot3, false);
+plotText = document.getElementsByClassName("plot-text3")[0];
+if(plotText) plotText.addEventListener('click', showPlot3, false);
 
-var plotText = document.getElementsByClassName("plot-text4")[0];
-plotText.addEventListener('click', showPlot4, false);
+plotText = document.getElementsByClassName("plot-text4")[0];
+if(plotText) plotText.addEventListener('click', showPlot4, false);
 
 function showPlot1(e) {
     fetch('api/plot1')
