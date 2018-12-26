@@ -100,7 +100,6 @@ async function showPlot(){
                 data: Object.values(extraRuns)
             }]
         });
-document.getElementById("plot3-container").style.display = "block";
 }
 
 showPlot();

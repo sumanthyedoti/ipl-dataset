@@ -105,8 +105,6 @@ async function showPlot(){
                 series: matchesWon
             });
             console.log(matchesWon);
-    document.getElementById("plot2-container").style.display = "block";
-
 }
 
 showPlot();

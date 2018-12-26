@@ -104,7 +104,6 @@ async function showPlot(){
             data: econ20
         }]
     });
-document.getElementById("plot4-container").style.display = "block";
 }
 
 

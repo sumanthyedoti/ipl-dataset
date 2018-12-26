@@ -18,12 +18,10 @@ app.use(function(req, res, next) {
     next();
 });
 app.get('/',(req,res)=>{
-    app.get('/plot1',(req,res)=>{
-        res.render('plot.ejs',{
-            title: 'IPL Dataset',
-            plot: 1,
-            plotTitle: 'Matches played per year'
-        });
+    res.render('plot.ejs',{
+        title: 'IPL Dataset',
+        plot: 1,
+        plotTitle: 'Matches played per year'
     });
 });
 app.get('/plot1',(req,res)=>{
@@ -53,9 +51,6 @@ app.get('/plot4',(req,res)=>{
         plot: 4,
         plotTitle: 'Top 20 economical bowlers in IPL-2015'
     });
-});
-app.get('/plot5',(req,res)=>{
-    res.sendFile(__dirname+'/public/plot5.html');
 });
 app.get('/api/plot1',(req,res)=>{
     plot1.getData()

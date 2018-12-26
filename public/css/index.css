@@ -17,7 +17,7 @@ a{
 body{
     width: 84%;
     margin: auto;
-    background-color: #193f79;
+    background-color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .main-body{
@@ -43,6 +43,7 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 5px 20px;
     
 }
 .nav-list-item{
@@ -52,7 +53,7 @@ body{
     font-size: 16px;
     font-weight: bold;
     color: rgb(12, 1, 1);
-    background-color: rgb(170, 163, 163);
+    background-color: rgb(187, 179, 179);
     margin: 5px;
     min-height: 60px;
     border-radius: 5px;
@@ -98,6 +99,5 @@ body{
     margin: 20px auto;
     position: relative;
     z-index: 100;
-    top:-10px;
-    display: none;
+    top:-18px;
 }

@@ -100,7 +100,6 @@ async function showPlot(){
                 data: Object.values(matchesInYear)
             }]
         });
-        document.getElementById("plot1-container").style.display = "block";
 }
 
 showPlot();
